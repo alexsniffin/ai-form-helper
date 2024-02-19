@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Settings</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+<div class="container">
+  <h1>Extension Settings</h1>
+  <form id="settingsForm">
+    <div class="form-group">
+      <label for="oaiHost">OAI Host:</label>
+      <input type="text" id="oaiHost" name="oai_host" placeholder="Enter OAI Host">
+    </div>
+    <div class="form-group">
+      <label for="apiKey">API Key:</label>
+      <input type="password" id="apiKey" name="api_key" placeholder="Enter API Key">
+    </div>
+    <div class="form-group">
+      <label for="fileContent">File Content:</label>
+      <textarea id="fileContent" name="file_content" placeholder="Paste file content here"></textarea>
+    </div>
+    <button type="submit">Save</button>
+  </form>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>

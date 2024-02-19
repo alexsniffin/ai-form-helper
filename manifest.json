@@ -1,0 +1,36 @@
+{
+    "name": "AI Form Helper",
+    "version": "1.0",
+    "description": "AI Form Helper is a Chrome extension designed to enhance web form interaction by automatically filling form fields with intelligent suggestions from a provided document.",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module",
+        "externally_connectable": {
+            "ids": [
+                "ijnbbjacmjgkbjgppaaonnlobfcafagi"
+            ],
+            "matches": [
+                "https://www.google.com/"
+            ],
+            "accepts_tls_channel_id": false
+        }
+    },
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
